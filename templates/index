@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Generator</title>
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <form method="post">
+        <button type="submit">Generate Password</button>
+    </form>
+
+    {% if password %}
+    <h2>Your password is:</h2>
+    <p><strong>{{ password }}</strong></p>
+    {% endif %}
+</body>
+</html>
