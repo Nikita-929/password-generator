@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import random
+import os
 
 app = Flask(__name__)
 
@@ -27,4 +28,5 @@ def generate_password():
     return render_template('index.html', password=password)
 
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get('PORT', 5000))  # Required for Render
+    app.run(host='0.0.0.0', port=port)        # Required for Render
